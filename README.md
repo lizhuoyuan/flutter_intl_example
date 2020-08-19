@@ -1,6 +1,6 @@
 # 准备工作
 
-## 搜索插件 : Flutter Intl
+## 搜索插件并安装 : Flutter Intl
 
 ![插件](http://pictures-upyun.test.upcdn.net/img/20200413204441591.png)
 
