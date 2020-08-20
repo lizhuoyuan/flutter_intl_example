@@ -68,7 +68,7 @@ return MaterialApp(
 
 没有`context` 时可以使用`S.current.key`
 
-具体使用方式请参考本项目的代码
+具体使用方式请参考[本项目](https://github.com/lizhuoyuan/flutter_intl_example)的代码
 
 *注意 :*
 
