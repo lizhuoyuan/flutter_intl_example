@@ -21,10 +21,13 @@ class MessageLookup extends MessageLookupByLibrary {
 
   static m0(name) => "language ${name}";
 
+  static m1(param1, param2) => "${param1} , s ${param2}";
+
   final messages = _notInlinedMessages(_notInlinedMessages);
   static _notInlinedMessages(_) => <String, Function> {
     "age" : MessageLookupByLibrary.simpleMessage("age"),
     "name" : MessageLookupByLibrary.simpleMessage("name"),
-    "pageHomeWelcome" : m0
+    "pageHomeWelcome" : m0,
+    "test" : m1
   };
 }

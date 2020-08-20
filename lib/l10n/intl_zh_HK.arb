@@ -1,5 +1,7 @@
 {
   "name": "HK名字",
   "age": "HK年齡",
-  "pageHomeWelcome": "hk语言: {name}"
+  "pageHomeWelcome": "hk语言: {name}",
+  "test": "{param1} , s {param2}"
+
 }

@@ -62,6 +62,16 @@ class S {
       args: [name],
     );
   }
+
+  /// `{param1} , s {param2}`
+  String test(Object param1, Object param2) {
+    return Intl.message(
+      '$param1 , s $param2',
+      name: 'test',
+      desc: '',
+      args: [param1, param2],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
