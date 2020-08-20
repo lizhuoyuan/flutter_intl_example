@@ -68,7 +68,7 @@ return MaterialApp(
 
 没有`context` 时可以使用`S.current.key`
 
-
+具体使用方式请参考本项目的代码
 
 *注意 :*
 
@@ -78,7 +78,7 @@ return MaterialApp(
 4. 此方式无需依赖`intl`包 , 但不提供`intl`相关功能. 需要额外功能才需要依赖`intl`.
 5. 如不想弃用旧版intl的AS插件,但AS版本又不支持,可使用该插件生成的dart代码替代`i18n`中的代码,但可能需要修改类名.
 
-
 ### 从flutter i18n过渡
  1. 成功初始化之后，复制原有的arb文件到`l10n`文件夹下， 并修改名字 ，例如：intl_en.arb , intl_zh_CN.arb
  2. 将之前使用导入i18n.dart的地方替换成l10n.dart，一般只修改导入的头文件即可。
+ 3. flutter i18n中的带变量的写法为${param},而flutter intl插件为{param},要注意去掉$.
