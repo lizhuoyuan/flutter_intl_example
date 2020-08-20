@@ -1,4 +1,5 @@
 {
   "name": "HK名字",
-  "age": "HK年齡"
+  "age": "HK年齡",
+  "pageHomeWelcome": "hk语言: {name}"
 }

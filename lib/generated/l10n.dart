@@ -52,6 +52,16 @@ class S {
       args: [],
     );
   }
+
+  /// `language {name}`
+  String pageHomeWelcome(Object name) {
+    return Intl.message(
+      'language $name',
+      name: 'pageHomeWelcome',
+      desc: '',
+      args: [name],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
