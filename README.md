@@ -79,3 +79,6 @@ return MaterialApp(
 5. 如不想弃用旧版intl的AS插件,但AS版本又不支持,可使用该插件生成的dart代码替代`i18n`中的代码,但可能需要修改类名.
 
 
+### 从flutter i18n过渡
+ 1. 成功初始化之后，复制原有的arb文件到`l10n`文件夹下， 并修改名字 ，例如：intl_en.arb , intl_zh_CN.arb
+ 2. 将之前使用导入i18n.dart的地方替换成l10n.dart，一般只修改导入的头文件即可。
