@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:intl/intl.dart';
+import 'package:intl_module/ModuleWidget.dart';
 import 'generated/l10n.dart';
+import 'package:intl_module/generated/l10n.dart' as Smodule;
 
 void main() {
   runApp(MyApp());
@@ -14,6 +16,7 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       localizationsDelegates: const [
         S.delegate,
+        Smodule.S.delegate,
         GlobalMaterialLocalizations.delegate,
         GlobalCupertinoLocalizations.delegate,
         GlobalWidgetsLocalizations.delegate
@@ -25,7 +28,7 @@ class MyApp extends StatelessWidget {
       },
       theme: ThemeData(
         primarySwatch: Colors.blue,
-        visualDensity: VisualDensity.adaptivePlatformDensity,
+        //  visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       home: MyHomePage(title: 'Flutter Demo Home Page'),
     );
@@ -52,6 +55,8 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
+    double bigFontSize = 100;
+    double smallFontSize = 16;
     return Scaffold(
       appBar: AppBar(
         title: Text(widget.title),
@@ -67,16 +72,13 @@ class _MyHomePageState extends State<MyHomePage> {
               S.of(context).name,
             ),
             //没有context时可用
-            Text(
-              '${S.current.age}',
-              style: Theme.of(context).textTheme.headline4,
-            ),
+            ModuleWidget(),
           ],
         ),
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: _changeLanguage,
-        tooltip: '改成英语',
+        tooltip: 'change to english',
         child: Icon(Icons.refresh),
       ), // This trailing comma makes auto-formatting nicer for build methods.
     );
